@@ -12,6 +12,15 @@
     <name>tc-expences-gwt</name>
     <packaging>war</packaging>
 	
+  
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-parent</artifactId> 
+      <version>2.2.2.RELEASE</version> 
+      <relativePath/> 
+  </parent> 
+  
+  
     <dependencyManagement>
         <dependencies>
             <!-- ensure all GWT deps use the same version (unless overridden) -->
@@ -26,6 +35,53 @@
     </dependencyManagement>
 
     <dependencies>
+     <dependency> 
+          <groupId>org.springframework.boot</groupId> 
+          <artifactId>spring-boot-starter-web</artifactId> 
+      </dependency> 
+      
+       <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+      </dependency>
+      
+      
+      <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+    <scope>provided</scope>
+</dependency>
+
+    <!-- 
+      <dependency> 
+          <groupId>org.springframework.boot</groupId> 
+          <artifactId>spring-boot-starter-web</artifactId> 
+      </dependency> 
+      
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <exclusions>
+          <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <exclusions>
+          <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      
+       -->
+      
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-servlet</artifactId>

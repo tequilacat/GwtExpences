@@ -8,7 +8,7 @@
   <!-- Servlets -->
   <servlet>
     <servlet-name>greetServlet</servlet-name>
-    <servlet-class>org.tequilacat.tcexpences.server.MessageServiceImpl</servlet-class>
+    <servlet-class>org.tequilacat.tcexpences.server.controllers.MessageServiceImpl</servlet-class>
   </servlet>
 
   <servlet-mapping>

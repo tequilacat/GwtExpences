@@ -1,4 +1,4 @@
-package org.tequilacat.tcexpences.server;
+package org.tequilacat.tcexpences.server.controllers;
 
 import org.tequilacat.tcexpences.client.dto.ExpenceEntryDto;
 import org.tequilacat.tcexpences.shared.MessageService;
