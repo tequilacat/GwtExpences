@@ -9,10 +9,13 @@ import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collection;
 
+import javax.servlet.annotation.WebServlet;
+
 /**
  * The server-side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
+@WebServlet(urlPatterns = "/tcexpences/greet", name = "greetServlet")
 public class MessageServiceImpl extends RemoteServiceServlet implements MessageService {
 
   public String sendMessage(String message) throws IllegalArgumentException {

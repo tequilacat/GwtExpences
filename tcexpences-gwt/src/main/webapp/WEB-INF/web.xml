@@ -6,7 +6,7 @@
          xmlns="http://java.sun.com/xml/ns/javaee">
 
   <!-- Servlets -->
-  <servlet>
+  <!-- <servlet>
     <servlet-name>greetServlet</servlet-name>
     <servlet-class>org.tequilacat.tcexpences.server.controllers.MessageServiceImpl</servlet-class>
   </servlet>
@@ -15,7 +15,8 @@
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/tcexpences/greet</url-pattern>
   </servlet-mapping>
-
+ -->
+ 
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>TCExpences.html</welcome-file>
