@@ -1,20 +1,17 @@
 package org.tequilacat.tcexpences.server.controllers;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-//import org.apache.log4j.Logger;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import org.springframework.web.bind.annotation.RestController;
-import org.tequilacat.tcexpences.client.dto.CategoryDto;
 import org.tequilacat.tcexpences.server.services.CategoryService;
 import org.tequilacat.tcexpences.server.services.EntryService;
+import org.tequilacat.tcexpences.server.services.ReportService;
 
 @RestController
 public class EntryController {
@@ -23,6 +20,7 @@ public class EntryController {
 
   private @Autowired EntryService testService;
   private @Autowired CategoryService categoryService;
+  private @Autowired ReportService reportService;
   
   @RequestMapping(value = "/tcexpences/api/entries", method = RequestMethod.GET)
   public ResponseEntity<?> getAllEntries() {
@@ -34,5 +32,11 @@ public class EntryController {
   public ResponseEntity<?> getAllCategories() {
     log.debug("get all categories");
     return ResponseEntity.ok(categoryService.listAll());
+  }
+  
+  @RequestMapping(value = "/tcexpences/api/reports", method = RequestMethod.GET)
+  public ResponseEntity<?> getAllReports() {
+    log.debug("get all reports");
+    return ResponseEntity.ok(reportService.getAllReports());
   }
 }

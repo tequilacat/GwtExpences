@@ -6,6 +6,7 @@ import org.fusesource.restygwt.client.MethodCallback;
 import org.fusesource.restygwt.client.RestService;
 import org.tequilacat.tcexpences.client.dto.CategoryDto;
 import org.tequilacat.tcexpences.client.dto.ExpenceEntryDto;
+import org.tequilacat.tcexpences.client.dto.ReportDto;
 
 import com.google.gwt.core.client.GWT;
 import javax.ws.rs.GET;
@@ -24,4 +25,8 @@ public interface ClientEntryService extends RestService {
   @GET
   @Path("/api/categories")
   public void getAllCategories(MethodCallback<List<CategoryDto>> cb);
+
+  @GET
+  @Path("/api/reports")
+  public void getAllReports(MethodCallback<List<ReportDto>> cb);
 }

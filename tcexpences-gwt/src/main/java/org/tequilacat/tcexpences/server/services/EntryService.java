@@ -1,10 +1,13 @@
 package org.tequilacat.tcexpences.server.services;
 
+import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.tequilacat.tcexpences.client.dto.ExpenceEntryDto;
+import org.tequilacat.tcexpences.client.dto.ReportDto;
 
 @Service
 public class EntryService {
